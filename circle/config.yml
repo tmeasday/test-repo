@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  main_stack:
+    working_directory: ~/test-repo
+    docker:
+      - image: circleci/node:8.4.0
+    steps:
+      - checkout
+      - run:
+          command: ./script.sh
